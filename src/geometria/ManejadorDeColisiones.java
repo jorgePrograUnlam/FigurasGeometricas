@@ -3,19 +3,15 @@ package geometria;
 public class ManejadorDeColisiones {
 	
 	public boolean circuloCirculo(Circulo c1, Circulo c2) {
-		return c2.getCentro().getDistancia(c1.getCentro()) < c2.getRadio()
-				+ c1.getRadio();
+		return c2.getCentro().getDistancia(c1.getCentro()) < c2.getRadio() + c1.getRadio();
 	}
 
 	public boolean rectanguloRectangulo(Rectangulo r1,
 			Rectangulo r2) {
 		return (r1.getVertice().getX() + r1.getAncho() >= r2.getVertice().getX()
-				&& r1.getVertice().getX() <= r2.getVertice().getX()
-						+ r2.getAncho()
-				&& r1.getVertice().getY() + r1.getAlto() >= r2.getVertice()
-						.getY()
-				&& r1.getVertice().getY() <= r2.getVertice().getY()
-						+ r2.getAlto());
+				&& r1.getVertice().getX() <= r2.getVertice().getX()+ r2.getAncho()
+				&& r1.getVertice().getY() + r1.getAlto() >= r2.getVertice().getY()
+				&& r1.getVertice().getY() <= r2.getVertice().getY() + r2.getAlto());
 	}
 
 	public boolean circuloRectangulo(Circulo c1, Rectangulo r2) {
